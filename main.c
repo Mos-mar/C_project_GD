@@ -83,40 +83,39 @@ int s(start) à int e(end) definira le % de la part.*/
 
     /*Version loop sur les arcs*/
     printf("nombre de arguments %d\n",argc);
-    // declare variables
-    int x; // for numerical arguments
-    char *bbox; // for string arguments
-    int is_number; // flag to indicate if argument is a number
+    // declaration des variables
+    int x; // pour les arguments chiffre
+    char *bbox; // pour les arguments string
+    int is_number; // flag pour indiquer si l'argument est un nombre
     for(int j = 1 ; j < argc ; j++)
     {
         printf("affichage argv[j] : %s\n",argv[j]);
 
-        // initialize flag
+       
         is_number = 1;
 
-        // loop through each character of argument
+        // loop sur chaque argument
         for (int i = 0; argv[j][i] != '\0'; i++) {
-            // if character is not a digit, set flag to false and break loop
+            // si le char n'est pas un chiffre , break loop
             if (!isdigit(argv[j][i])) {
                 is_number = 0;
                 break;
             }
         }
 
-        // if argument is a number, convert it to int and assign it to x
+        
+        // si l'argument est un nombre , convertion en int 
         if (is_number) {
-            // do not use int here
             x = strtol(argv[j],NULL, 10);
             printf("x : %d\n",x);
             e = (s + x * 360 / 100);
             gdImageFilledArc(im, 1200, 800, 1200, 1200, s, e, colors[j], 100); // draw the arc
-            s = e; // update the start angle
+            s = e; //maj de l'angle de départ
             //printf("j : %d x : %d e : %d s : %d\n",j,x,e,s);
         }
 
-        // else, argument is a string, assign it to bbox
+        // else, argument est un string on assigne à bbox
         else {
-            // do not use char* here
             bbox = gdImageStringFT(NULL, NULL, colors[6], fontpath, 20, 0, 0, 0, argv[j]);
             // calcul du centre
             int cx = 1200 / 2;
