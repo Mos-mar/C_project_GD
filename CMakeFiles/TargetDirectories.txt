@@ -1,0 +1,7 @@
+/home/mariomoser/C_learning_journey/ProjetLibGD/CMakeFiles/ProjetLibGD.dir
+/home/mariomoser/C_learning_journey/ProjetLibGD/CMakeFiles/edit_cache.dir
+/home/mariomoser/C_learning_journey/ProjetLibGD/CMakeFiles/rebuild_cache.dir
+/home/mariomoser/C_learning_journey/ProjetLibGD/CMakeFiles/list_install_components.dir
+/home/mariomoser/C_learning_journey/ProjetLibGD/CMakeFiles/install.dir
+/home/mariomoser/C_learning_journey/ProjetLibGD/CMakeFiles/install/local.dir
+/home/mariomoser/C_learning_journey/ProjetLibGD/CMakeFiles/install/strip.dir
